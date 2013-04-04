@@ -1,0 +1,1 @@
+java.awt.Rectangle[x=150,y=200,width=40,height=100]
