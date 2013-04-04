@@ -18,7 +18,7 @@ These Koans are an interactive and fun way to be introduced to and learn how to 
 - UsingReporters
  
 
-*Getting Started*  
+**Getting Started**  
 Download the zip, expand it & import it into eclipse. 
 Run the unit test, see it fail, then  Fill in the blank ("____") Run it again to see it pass.
 
