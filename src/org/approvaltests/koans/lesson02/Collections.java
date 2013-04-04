@@ -7,10 +7,22 @@ import java.util.List;
 import org.approvaltests.Approvals;
 import org.approvaltests.koans.helpers.Koans;
 import org.approvaltests.koans.helpers.Sequence;
+import org.approvaltests.reporters.JunitReporter;
+import org.approvaltests.reporters.UseReporter;
 import org.junit.Test;
 import org.lambda.functions.Function1;
 
-//@UseReporter(JunitReporter.class)
+/**
+ * How to do Koans:
+ * Step 1: Press the Run Button (Place cursor on the Method name to run a single method)
+ * PC: Ctrl+F11
+ * Mac: Command+fn+F11
+ * Step 2: Read the name of the Method that Failed
+ * Step 3: Fill in the blank (___) to make it pass
+ * Step 4: Repeat Until Enlightenment
+ * Do not change anything except the blank (___)
+ */
+@UseReporter(JunitReporter.class)
 public class Collections extends Koans
 {
   @Test
@@ -58,8 +70,12 @@ public class Collections extends Koans
   public void ApprovalHelpShowWhenThingsHaveBeenRemoved() throws Exception
   {
     HashMap<String, String> m = new HashMap<String, String>();
-    m.put("Conservitory", "Curn Mustard");
-    m.put("Prosseur", "Plum");
+    m.put("Miss Scarlet", "Conservitory");
+    m.put("Colonel Mustard", "Kitchen");
+    m.put("Mrs. White", "Billiard Room");
+    m.put("Mr. Green", "Library");
+    m.put("Mrs. Peacock", "Dining Room");
+    m.put("Professor Plum", "Study");
     m.remove(___);
     Approvals.verify(m);
   }

@@ -14,6 +14,16 @@ import org.approvaltests.reporters.windows.TortoiseImageDiffReporter;
 import org.junit.Assert;
 import org.junit.Test;
 
+/**
+ * How to do Koans:
+ * Step 1: Press the Run Button (Place cursor on the Method name to run a single method)
+ * PC: Ctrl+F11
+ * Mac: Command+fn+F11
+ * Step 2: Read the name of the Method that Failed
+ * Step 3: Fill in the blank (___) to make it pass
+ * Step 4: Repeat Until Enlightenment
+ * Do not change anything except the blank (___)
+ */
 @UseReporter(QuietReporter.class)
 public class UsingReporters extends Koans
 {
