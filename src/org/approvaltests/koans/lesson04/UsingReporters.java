@@ -1,7 +1,5 @@
 package org.approvaltests.koans.lesson04;
 
-import java.io.File;
-
 import org.approvaltests.ReporterFactory;
 import org.approvaltests.core.ApprovalFailureReporter;
 import org.approvaltests.koans.helpers.Koans;
@@ -15,8 +13,6 @@ import org.approvaltests.reporters.UseReporter;
 import org.approvaltests.reporters.windows.TortoiseImageDiffReporter;
 import org.junit.Assert;
 import org.junit.Test;
-
-import com.spun.util.ClassUtils;
 
 @UseReporter(QuietReporter.class)
 public class UsingReporters extends Koans
@@ -50,40 +46,20 @@ public class UsingReporters extends Koans
     if (!decode("=fikpKnf").equals(____))
     {
       ApprovalFailureReporter reporter = ReporterFactory.getFromAnnotation();
-      reporter.report(
-          ClassUtils.getSourceDirectory(getClass()).getAbsolutePath() + File.separator + "Insight.txt", "");
+      reporter.report(getPath("Insight.txt"), "");
+      Assert.fail("Please fill in the blank");
     }
   }
   @Test
-  @UseReporter(FileLauncherReporter.class)
+  @UseReporter(ImageWebReporter.class)
   public void UsingImageForInsight() throws Exception
   {
     String whatWasTheOldColor = ___;
-    if (!decode("=fikpKnf").equals(____))
+    if (!decode("Ycl\\").equals(whatWasTheOldColor.toLowerCase()))
     {
       ApprovalFailureReporter reporter = ReporterFactory.getFromAnnotation();
-      reporter.report("./Insight.txt", null);
+      reporter.report(getPath("NewImage.png"), getPath("OldImage.png"));
+      Assert.fail("Please fill in the blank");
     }
-  }
-  @Test
-  public void testName() throws Exception
-  {
-    String encoded = push("blue", -9);
-    System.out.println(encoded);
-    System.out.println(decode(encoded));
-  }
-  private String decode(String string)
-  {
-    int offshift = 9;
-    return push(string, offshift);
-  }
-  public String push(String string, int offshift)
-  {
-    StringBuffer b = new StringBuffer();
-    for (char c : string.toCharArray())
-    {
-      b.append((char) ((int) c + (int) offshift));
-    }
-    return b.toString();
   }
 }
