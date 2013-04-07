@@ -28,6 +28,7 @@ Run the unit test, see it fail, then  Fill in the blank ("____") Run it again to
 - *Play*: Experimentation is a powerful learning tool. Don't be afraid to try stuff out, and run it to see what happens.
 - *Run the Test*: It is valuable to see what the results are. All Koans are designed to produce something even before they are filled in.
 - *Debug*: Set some break point and walk thru the code. It's a great way to get details. ({"Ctrl+R, Ctrl+T"}) will run in debug mode.
-- *Do Them with a Friend*: Learn is more fun and less fustrating when you have a friend with you. 
+- *Do Them with a Friend*: Learn is more fun and less fustrating when you have a friend with you.
+- *Retrospect after each koan* True insight comes from reflecting on the answer, not just obtaining it. [Answer 1 question from this list](https://github.com/approvals/ApprovalTests.java.Koans/blob/master/questions.md)
 
 
