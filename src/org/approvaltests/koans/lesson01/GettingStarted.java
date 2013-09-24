@@ -8,6 +8,7 @@ import org.approvaltests.Approvals;
 import org.approvaltests.koans.helpers.Koans;
 import org.approvaltests.koans.helpers.Person;
 import org.approvaltests.namer.ApprovalNamer;
+import org.approvaltests.reporters.DiffReporter;
 import org.approvaltests.reporters.JunitReporter;
 import org.approvaltests.reporters.UseReporter;
 import org.junit.Test;
@@ -26,18 +27,18 @@ import org.junit.Test;
 public class GettingStarted extends Koans
 {
   @Test
-  public void NormalJunitAsserts()
+  public void normalJunitAsserts()
   {
     Assert.assertEquals("Small String", ___);
   }
   @Test
-  public void ApprovalHidesTheExpectation() throws Exception
+  public void approvalHidesTheExpectation() throws Exception
   {
     Approvals.verify(___);
     // Hint: If you double click the 1st line of the Failure Trace a diff tool will open
   }
   @Test
-  public void ApprovalFileName() throws Exception
+  public void approvalFileName() throws Exception
   {
     ApprovalNamer namer = Approvals.createApprovalNamer();
     Assert.assertEquals(namer.getApprovalName(), ___);
@@ -49,21 +50,28 @@ public class GettingStarted extends Koans
     Assert.assertEquals(namer.getApprovalName(), "GettingStarted.UsesMethodName");
   }
   @Test
-  public void FileNames() throws Exception
+  public void fileNames() throws Exception
   {
     ApprovalNamer namer = Approvals.createApprovalNamer();
     String className = ___;
-    String methodName = "FileNames";
+    String methodName = "fileNames";
     String approvalName = className + "." + methodName;
     Assert.assertEquals(namer.getApprovalName(), approvalName);
   }
   @Test
-  public void ChangingTheGoldenMaster() throws Exception
+  @UseReporter(DiffReporter.class)
+  public void seeingFilesSideBySide() throws Exception
+  {
+    ApprovalNamer namer = Approvals.createApprovalNamer();
+    Approvals.verify(___ + "\r\n" + namer.getApprovalName());
+  }
+  @Test
+  public void changingTheGoldenMaster() throws Exception
   {
     Approvals.verify("This is the golden master");
   }
   @Test
-  public void VerifyObjects() throws Exception
+  public void verifyObjects() throws Exception
   {
     Rectangle r = new Rectangle();
     r.width = 40;
@@ -73,7 +81,7 @@ public class GettingStarted extends Koans
     Approvals.verify(r);
   }
   @Test
-  public void SometimeYouNeedABetterToString() throws Exception
+  public void sometimeYouNeedABetterToString() throws Exception
   {
     Person p = new Person("jane", "smith", true, 38);
     String format = "Person\n  FirstName:%s\n  LastName:%s\n  Sex:%s\n  Age:%s\n";
