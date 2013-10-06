@@ -22,4 +22,9 @@ public class KoansTests
     KoanUtils.assertKoan(new GettingStarted(), "verifyObjects", 150);
     KoanUtils.assertKoan(new GettingStarted(), "sometimeYouNeedABetterToString", "smith");
   }
+  @Test
+  @UseReporter(QuietReporter.class)
+  public void TestLesson2() throws Exception
+  {
+  }
 }

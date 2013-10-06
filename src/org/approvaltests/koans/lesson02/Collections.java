@@ -26,13 +26,13 @@ import org.lambda.functions.Function1;
 public class Collections extends Koans
 {
   @Test
-  public void SimpleArrays() throws Exception
+  public void simpleArrays() throws Exception
   {
     String[] approvalsIsPortedTo = {".Net", ___, "Perl", "Ruby", "Php", "Node.js"};
     Approvals.verifyAll("Language", approvalsIsPortedTo);
   }
   @Test
-  public void ListsWorkTheSameAsArrays() throws Exception
+  public void listsWorkTheSameAsArrays() throws Exception
   {
     List<String> approvalsIsGoodFor = new ArrayList<String>();
     approvalsIsGoodFor.add("Strings");
@@ -47,7 +47,7 @@ public class Collections extends Koans
     Approvals.verifyAll("Good For", approvalsIsGoodFor);
   }
   @Test
-  public void MapsAreSortedBeforeDisplay() throws Exception
+  public void mapsAreSortedBeforeDisplay() throws Exception
   {
     HashMap<Integer, String> m = new HashMap<Integer, String>();
     m.put(1000, "M");
@@ -60,14 +60,14 @@ public class Collections extends Koans
     Approvals.verify(m);
   }
   @Test
-  public void TheUseOfTheLabel() throws Exception
+  public void theUseOfTheLabel() throws Exception
   {
     String[] greatTv = {
         "Firefly", "Game of Throne", "Futurama", "Arrested Development", "Big Bang Theory", "Better Off Ted"};
     Approvals.verifyAll(___, greatTv);
   }
   @Test
-  public void ApprovalHelpShowWhenThingsHaveBeenRemoved() throws Exception
+  public void approvalHelpShowWhenThingsHaveBeenRemoved() throws Exception
   {
     HashMap<String, String> m = new HashMap<String, String>();
     m.put("Miss Scarlet", "Conservitory");
@@ -80,7 +80,7 @@ public class Collections extends Koans
     Approvals.verify(m);
   }
   @Test
-  public void ApprovalHelpShowWhenThingsHaveBeenAdded() throws Exception
+  public void approvalHelpShowWhenThingsHaveBeenAdded() throws Exception
   {
     HashMap<String, String> punch = new HashMap<String, String>();
     punch.put("Orange Juice", "2 cups");
@@ -93,14 +93,14 @@ public class Collections extends Koans
     Approvals.verify(punch);
   }
   @Test
-  public void HeadersHelpExplainTheContextWhenThingsAreConfusing() throws Exception
+  public void headersHelpExplainTheContextWhenThingsAreConfusing() throws Exception
   {
     String header = ___;
     Integer[] values = {1, 2, 6, 9, 11};
     Approvals.verifyAll(header, values, new Sequence());
   }
   @Test
-  public void TransformingArraysManually() throws Exception
+  public void transformingArraysManually() throws Exception
   {
     int[] numbers = {1, 3, ____, 10, 12, 16};
     StringBuffer b = new StringBuffer();
@@ -111,7 +111,7 @@ public class Collections extends Koans
     Approvals.verify(b);
   }
   @Test
-  public void TransformingArraysWithFunctions() throws Exception
+  public void transformingArraysWithFunctions() throws Exception
   {
     Integer[] numbers = {1, 3, 5, 10, 12, 16};
     Approvals.verifyAll("Squares", numbers, new Function1<Integer, String>()
@@ -123,7 +123,7 @@ public class Collections extends Koans
     });
   }
   @Test
-  public void TransformingArraysWithLambdas() throws Exception
+  public void transformingArraysWithLambdas() throws Exception
   {
     // This requires java8
     Integer[] numbers = {1, 3, 5, 10, 12, 16};

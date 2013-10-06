@@ -47,7 +47,7 @@ public class GettingStarted extends Koans
   public void ___() throws Exception
   {
     ApprovalNamer namer = Approvals.createApprovalNamer();
-    Assert.assertEquals("GettingStarted.UsesMethodName", namer.getApprovalName());
+    Assert.assertEquals("GettingStarted.usesMethodName", namer.getApprovalName());
   }
   @Test
   public void fileNames() throws Exception
