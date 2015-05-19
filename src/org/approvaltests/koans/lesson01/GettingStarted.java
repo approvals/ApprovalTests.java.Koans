@@ -4,8 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import java.awt.Rectangle;
 
-import junit.framework.Assert;
-
 import org.approvaltests.Approvals;
 import org.approvaltests.koans.helpers.FileAssert;
 import org.approvaltests.koans.helpers.Koans;
@@ -14,6 +12,7 @@ import org.approvaltests.namer.ApprovalNamer;
 import org.approvaltests.reporters.DiffReporter;
 import org.approvaltests.reporters.JunitReporter;
 import org.approvaltests.reporters.UseReporter;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
