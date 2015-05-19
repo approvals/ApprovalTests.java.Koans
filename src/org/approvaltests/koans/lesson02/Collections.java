@@ -62,15 +62,19 @@ public class Collections extends Koans
   @Test
   public void theUseOfTheLabel() throws Exception
   {
-    String[] greatTv = {
-        "Firefly", "Game of Throne", "Futurama", "Arrested Development", "Big Bang Theory", "Better Off Ted"};
+    String[] greatTv = {"Firefly",
+        "Game of Thrones",
+        "Futurama",
+        "Arrested Development",
+        "Big Bang Theory",
+        "Better Off Ted"};
     Approvals.verifyAll(___, greatTv);
   }
   @Test
   public void approvalHelpShowWhenThingsHaveBeenRemoved() throws Exception
   {
     HashMap<String, String> m = new HashMap<String, String>();
-    m.put("Miss Scarlet", "Conservitory");
+    m.put("Miss Scarlet", "Conservatory");
     m.put("Colonel Mustard", "Kitchen");
     m.put("Mrs. White", "Billiard Room");
     m.put("Mr. Green", "Library");
