@@ -33,29 +33,34 @@ public class GettingStarted extends Koans
   {
     assertEquals("Small String", ___);
   }
+
   @Test
   public void assertAgainstFileContents()
   {
     FileAssert.verifyContentsIsEqual("expected.txt", ___);
   }
+
   @Test
   public void usingAutomaticFileNames()
   {
     ApprovalNamer namer = Approvals.createApprovalNamer();
     FileAssert.verifyContentsIsEqual(namer.getApprovalName() + ".txt", ___);
   }
+
   @Test
   public void automaticallyGeneratedNames()
   {
     ApprovalNamer namer = Approvals.createApprovalNamer();
     assertEquals(namer.getApprovalName(), ___);
   }
+
   @Test
   public void ___() throws Exception
   {
     ApprovalNamer namer = Approvals.createApprovalNamer();
     assertEquals("GettingStarted.usesMethodName", namer.getApprovalName());
   }
+
   @Test
   public void fileNames() throws Exception
   {
@@ -65,6 +70,7 @@ public class GettingStarted extends Koans
     String approvalName = className + "." + methodName;
     Assert.assertEquals(namer.getApprovalName(), approvalName);
   }
+
   @Test
   public void verifyBiggerText() throws Exception
   {
@@ -76,12 +82,14 @@ public class GettingStarted extends Koans
     ApprovalNamer namer = Approvals.createApprovalNamer();
     FileAssert.verifyContentsIsEqual(namer.getApprovalName() + ".txt", r.toString());
   }
+
   @Test
   public void approvalsUsesThisFileNameConvention() throws Exception
   {
     Approvals.verify(___);
     // Hint: If you double click the 1st line of the Failure Trace a diff tool will open
   }
+
   @Test
   @UseReporter(DiffReporter.class)
   public void seeingFilesSideBySide() throws Exception
@@ -89,12 +97,14 @@ public class GettingStarted extends Koans
     ApprovalNamer namer = Approvals.createApprovalNamer();
     Approvals.verify(___ + "\r\n" + namer.getApprovalName());
   }
+
   @Test
   public void changingTheGoldenMaster() throws Exception
   {
     Approvals.verify("This is the golden master");
     //Hint: What is the name of the file where the blank is?
   }
+
   @Test
   public void verifyObjects() throws Exception
   {
@@ -105,6 +115,7 @@ public class GettingStarted extends Koans
     r.y = 200;
     Approvals.verify(r);
   }
+
   @Test
   public void sometimeYouNeedABetterToString() throws Exception
   {
