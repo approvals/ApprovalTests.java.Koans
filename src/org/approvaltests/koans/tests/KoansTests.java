@@ -9,7 +9,7 @@ public class KoansTests
 {
   @Test
   @UseReporter(QuietReporter.class)
-  public void TestLesson1() throws Exception
+  public void testLesson1()
   {
     KoanUtils.assertKoan(new GettingStarted(), "normalJunitAsserts", "Small String");
     KoanUtils.assertKoan(new GettingStarted(), "assertAgainstFileContents", "Small String");
@@ -26,9 +26,10 @@ public class KoansTests
     KoanUtils.assertKoan(new GettingStarted(), "verifyObjects", 150);
     KoanUtils.assertKoan(new GettingStarted(), "sometimeYouNeedABetterToString", "cobb");
   }
+  
   @Test
   @UseReporter(QuietReporter.class)
-  public void TestLesson2() throws Exception
+  public void testLesson2()
   {
   }
 }

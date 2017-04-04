@@ -1,7 +1,7 @@
 package org.approvaltests.koans.tests;
 
 import static org.junit.Assert.assertTrue;
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.approvaltests.koans.helpers.Koans;
 
@@ -11,12 +11,14 @@ public class KoanUtils
   {
     assertState(koan, method, false);
   }
+  
   public static void assertKoan(Koans koan, String method, Object answer)
   {
     assertState(koan, method, false);
     setAnswers(koan, answer);
     assertState(koan, method, true);
   }
+  
   private static void setAnswers(Koans koan, Object answer)
   {
     if (answer instanceof String)
@@ -33,7 +35,7 @@ public class KoanUtils
     boolean failed = false;
     try
     {
-      koan.getClass().getMethod(method, null).invoke(koan, null);
+      koan.getClass().getMethod(method).invoke(koan);
     }
     catch (Throwable e)
     {

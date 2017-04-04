@@ -31,6 +31,7 @@ public class Collections extends Koans
     String[] approvalsIsPortedTo = {".Net", ___, "Perl", "Ruby", "Php", "Node.js"};
     Approvals.verifyAll("Language", approvalsIsPortedTo);
   }
+
   @Test
   public void listsWorkTheSameAsArrays() throws Exception
   {
@@ -46,6 +47,7 @@ public class Collections extends Koans
     approvalsIsGoodFor.add("Email");
     Approvals.verifyAll("Good For", approvalsIsGoodFor);
   }
+
   @Test
   public void mapsAreSortedBeforeDisplay() throws Exception
   {
@@ -59,6 +61,7 @@ public class Collections extends Koans
     m.put(50, ___);
     Approvals.verify(m);
   }
+
   @Test
   public void theUseOfTheLabel() throws Exception
   {
@@ -70,6 +73,7 @@ public class Collections extends Koans
         "Better Off Ted"};
     Approvals.verifyAll(___, greatTv);
   }
+
   @Test
   public void approvalHelpShowWhenThingsHaveBeenRemoved() throws Exception
   {
@@ -83,6 +87,7 @@ public class Collections extends Koans
     m.remove(___);
     Approvals.verify(m);
   }
+
   @Test
   public void approvalHelpShowWhenThingsHaveBeenAdded() throws Exception
   {
@@ -96,6 +101,7 @@ public class Collections extends Koans
     //punch.put(___,___); // <-- Uncomment Line to solve
     Approvals.verify(punch);
   }
+
   @Test
   public void headersHelpExplainTheContextWhenThingsAreConfusing() throws Exception
   {
@@ -103,6 +109,7 @@ public class Collections extends Koans
     Integer[] values = {1, 2, 6, 9, 11};
     Approvals.verifyAll(header, values, new Sequence());
   }
+
   @Test
   public void transformingArraysManually() throws Exception
   {
@@ -114,18 +121,21 @@ public class Collections extends Koans
     }
     Approvals.verify(b);
   }
+
   @Test
   public void transformingArraysWithFunctions() throws Exception
   {
     Integer[] numbers = {1, 3, 5, 10, 12, 16};
     Approvals.verifyAll("Squares", numbers, new Function1<Integer, String>()
     {
+      @Override
       public String call(Integer i)
       {
         return ___;
       }
     });
   }
+
   @Test
   public void transformingArraysWithLambdas() throws Exception
   {

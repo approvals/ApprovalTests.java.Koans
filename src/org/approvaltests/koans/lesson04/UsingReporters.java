@@ -34,12 +34,14 @@ public class UsingReporters extends Koans
     ApprovalFailureReporter reporter = ReporterFactory.getFromAnnotation();
     Assert.assertTrue("Please fill in the blank", reporter instanceof FileLauncherReporter);
   }
+
   @Test
   public void ConfiguringAClassLevelDefault() throws Exception
   {
     ApprovalFailureReporter reporter = ReporterFactory.getFromAnnotation();
     Assert.assertTrue(reporter.getClass().getName(), reporter instanceof _____);
   }
+
   @Test
   @UseReporter({ClipboardReporter.class, ImageWebReporter.class, TortoiseImageDiffReporter.class})
   public void ConfiguringMultipleReporters() throws Exception
@@ -49,6 +51,7 @@ public class UsingReporters extends Koans
     ApprovalFailureReporter second = multi.getReporters()[1];
     Assert.assertTrue(second.getClass().getName(), second instanceof _____);
   }
+
   @Test
   @UseReporter(FileLauncherReporter.class)
   public void UsingTextReportersForInsight() throws Exception
@@ -60,6 +63,7 @@ public class UsingReporters extends Koans
       Assert.fail("Please fill in the blank");
     }
   }
+  
   @Test
   @UseReporter(ImageWebReporter.class)
   public void UsingImageForInsight() throws Exception

@@ -1,6 +1,6 @@
 package org.approvaltests.koans.helpers;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.approvaltests.core.ApprovalFailureReporter;
 

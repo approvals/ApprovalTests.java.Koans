@@ -4,7 +4,7 @@ After each koan, answer one of the following questions?
 
 2.	What did you learn about how to do the koans?
 
-3.	What did you lean about eclipse?
+3.	What did you lean about Eclipse?
 
 4.	What did you think the blank was trying to show you?
 
@@ -12,7 +12,7 @@ After each koan, answer one of the following questions?
 
 6.	What surprised you about this koan?
 
-7.	What did you learn about the java?
+7.	What did you learn about Java?
 
 8.	How could you change this to learn something else?
 
