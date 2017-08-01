@@ -2,6 +2,7 @@ package org.approvaltests.koans.tests;
 
 import org.approvaltests.koans.lesson01.GettingStarted;
 import org.approvaltests.koans.lesson02.Collections;
+import org.approvaltests.koans.lesson04.UsingReporters;
 import org.approvaltests.reporters.QuietReporter;
 import org.approvaltests.reporters.UseReporter;
 import org.junit.Test;
@@ -58,6 +59,7 @@ public class KoansTests
   @UseReporter(QuietReporter.class)
   public void testLesson4()
   {
+    KoanUtils.assertKoanReady(new UsingReporters(), "ConfiguringTheFileLauncherReporter");
     // unsure how to test this yet
   }
 }
