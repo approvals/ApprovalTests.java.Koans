@@ -54,4 +54,10 @@ public class KoansTests
   {
     // unsure how to test this yet
   }
+  @Test
+  @UseReporter(QuietReporter.class)
+  public void testLesson4()
+  {
+    // unsure how to test this yet
+  }
 }
