@@ -48,4 +48,10 @@ public class KoansTests
   {
     KoanUtils.assertKoan(new Collections(), name, answer);
   }
+  @Test
+  @UseReporter(QuietReporter.class)
+  public void testLesson3()
+  {
+    // unsure how to test this yet
+  }
 }
