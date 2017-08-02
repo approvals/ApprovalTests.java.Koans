@@ -3,8 +3,8 @@ package org.approvaltests.koans.tests;
 import org.approvaltests.koans.lesson01.GettingStarted;
 import org.approvaltests.koans.lesson02.Collections;
 import org.approvaltests.koans.lesson04.UsingReporters;
-import org.approvaltests.reporters.QuietReporter;
-import org.approvaltests.reporters.UseReporter;
+import org.approvaltests.koans.lesson05.DataDrivenCombinations;
+import org.approvaltests.reporters.*;
 import org.junit.Test;
 
 public class KoansTests
@@ -61,5 +61,16 @@ public class KoansTests
   {
     KoanUtils.assertKoanReady(new UsingReporters(), "ConfiguringTheFileLauncherReporter");
     // unsure how to test this yet
+  }
+  @Test
+  @UseReporter(QuietReporter.class)
+  public void testLesson5()
+  {
+    assertLesson5("oneDimensionalInputIsTheSameAsArray", "Yoko");
+//    assertLesson5("twoDimensionalInputIsTheSameAsArray", 33);
+  }
+
+  private void assertLesson5(String name, Object answer) {
+    KoanUtils.assertKoan(new DataDrivenCombinations(), name, answer);
   }
 }
