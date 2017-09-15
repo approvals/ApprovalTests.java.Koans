@@ -67,7 +67,9 @@ public class KoansTests
   public void testLesson5()
   {
     assertLesson5("oneDimensionalInputIsTheSameAsArray", "Yoko");
-//    assertLesson5("twoDimensionalInputIsTheSameAsArray", 33);
+    assertLesson5("twoDimensionalInputGoesByTheSquare", 33);
+    assertLesson5("exceptionsAreOk", -2);
+    assertLesson5("workingWithALambda", "MMM");
   }
 
   private void assertLesson5(String name, Object answer) {

@@ -1,0 +1,12 @@
+[yy, M, dd] => 00/1/01 
+[yy, M, EEEE] => 00/1/Saturday 
+[yy, MMM, dd] => 00/Jan/01 
+[yy, MMM, EEEE] => 00/Jan/Saturday 
+[yy, MMMM, dd] => 00/January/01 
+[yy, MMMM, EEEE] => 00/January/Saturday 
+[yyyy, M, dd] => 2000/1/01 
+[yyyy, M, EEEE] => 2000/1/Saturday 
+[yyyy, MMM, dd] => 2000/Jan/01 
+[yyyy, MMM, EEEE] => 2000/Jan/Saturday 
+[yyyy, MMMM, dd] => 2000/January/01 
+[yyyy, MMMM, EEEE] => 2000/January/Saturday 
