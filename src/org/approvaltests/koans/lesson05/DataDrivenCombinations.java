@@ -49,19 +49,13 @@ public class DataDrivenCombinations extends Koans {
 
     @Test
     public void workingWithALambda() throws Exception {
-//        Date newMillennium = toDateInLocalTimeZone(LocalDateTime.of(2000, Month.JANUARY, 1, 0, 0, 0));
         LocalDateTime newMillennium = LocalDateTime.of(2000, Month.JANUARY, 1, 0, 0, 0);
         String[] years = {"yy", "yyyy"};
         String[] months = {"M", ___, "MMMM"};
         String[] days = {"dd", "EEEE"};
 
         CombinationApprovals.verifyAllCombinations((y, m, d) ->
-//                new SimpleDateFormat(y + "/" + m + "/" + d).format(newMillennium), years, months, days);
                 newMillennium.format(DateTimeFormatter.ofPattern(y + "/" + m + "/" + d)), years, months, days);
-    }
-
-    Date toDateInLocalTimeZone(LocalDateTime dateTime) {
-        return Date.from(dateTime.atZone(ZoneId.systemDefault()).toInstant());
     }
 }
 
