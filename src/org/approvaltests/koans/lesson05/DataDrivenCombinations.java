@@ -5,7 +5,10 @@ import org.approvaltests.koans.helpers.Koans;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -36,7 +39,7 @@ public class DataDrivenCombinations extends Koans {
     }
 
     @Test
-    public void ExceptionsAreOk() throws Exception {
+    public void exceptionsAreOk() throws Exception {
         Integer[] numerator = {60, 126, 42};
         Integer[] denominator1 = {3, 2};
         Integer[] denominator2 = {-1, ____, 1};
@@ -45,17 +48,20 @@ public class DataDrivenCombinations extends Koans {
     }
 
     @Test
-    public void WorkingWithALambda() throws Exception {
-        Calendar cal = Calendar.getInstance();
-        cal.set(2000, 0, 1, 0, 0, 0);
-        Date newMillenium = cal.getTime();
-//        Date newMillenium = new Date(2000, 1, 1, 0, 0, 0);
+    public void workingWithALambda() throws Exception {
+//        Date newMillennium = toDateInLocalTimeZone(LocalDateTime.of(2000, Month.JANUARY, 1, 0, 0, 0));
+        LocalDateTime newMillennium = LocalDateTime.of(2000, Month.JANUARY, 1, 0, 0, 0);
         String[] years = {"yy", "yyyy"};
-        String[] months = {"M", "MMM", "MMMM"};
+        String[] months = {"M", ___, "MMMM"};
         String[] days = {"dd", "EEEE"};
 
         CombinationApprovals.verifyAllCombinations((y, m, d) ->
-                new SimpleDateFormat(y + "/" + m + "/" + d).format(newMillenium), years, months, days);
+//                new SimpleDateFormat(y + "/" + m + "/" + d).format(newMillennium), years, months, days);
+                newMillennium.format(DateTimeFormatter.ofPattern(y + "/" + m + "/" + d)), years, months, days);
+    }
+
+    Date toDateInLocalTimeZone(LocalDateTime dateTime) {
+        return Date.from(dateTime.atZone(ZoneId.systemDefault()).toInstant());
     }
 }
 
