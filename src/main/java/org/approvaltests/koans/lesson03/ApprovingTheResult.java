@@ -6,7 +6,7 @@ import org.approvaltests.reporters.DiffReporter;
 import org.approvaltests.reporters.FileLauncherReporter;
 import org.approvaltests.reporters.QuietReporter;
 import org.approvaltests.reporters.UseReporter;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * To solve these puzzles, follow the directions

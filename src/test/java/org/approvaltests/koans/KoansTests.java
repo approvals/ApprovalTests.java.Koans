@@ -1,11 +1,11 @@
-package org.approvaltests.koans.tests;
+package org.approvaltests.koans;
 
 import org.approvaltests.koans.lesson01.GettingStarted;
 import org.approvaltests.koans.lesson02.Collections;
 import org.approvaltests.koans.lesson04.UsingReporters;
 import org.approvaltests.koans.lesson05.DataDrivenCombinations;
 import org.approvaltests.reporters.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class KoansTests
 {

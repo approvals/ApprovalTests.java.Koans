@@ -13,8 +13,11 @@ import org.approvaltests.reporters.MultiReporter;
 import org.approvaltests.reporters.QuietReporter;
 import org.approvaltests.reporters.UseReporter;
 import org.approvaltests.reporters.windows.TortoiseImageDiffReporter;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static com.spun.util.Asserts.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * How to do Koans:
@@ -49,7 +52,7 @@ public class UsingReporters extends Koans
     ApprovalFailureReporter reporter = ReporterFactory.get();
     MultiReporter multi = (MultiReporter) reporter;
     ApprovalFailureReporter second = multi.getReporters()[1];
-    Assert.assertTrue(second.getClass().getName(), second instanceof _____);
+    assertTrue(second.getClass().getName(), second instanceof _____);
   }
   @Test
   @UseReporter(FileLauncherReporter.class)
@@ -59,7 +62,7 @@ public class UsingReporters extends Koans
     {
       ApprovalFailureReporter reporter = ReporterFactory.get();
       reporter.report(getPath("Insight.txt"), "");
-      Assert.fail("Please fill in the blank");
+      fail("Please fill in the blank");
     }
   }
   @Test
@@ -71,14 +74,14 @@ public class UsingReporters extends Koans
     {
       ApprovalFailureReporter reporter = ReporterFactory.get();
       reporter.report(getPath("NewImage.png"), getPath("OldImage.png"));
-      Assert.fail("Please fill in the blank");
+      fail("Please fill in the blank");
     }
   }
   private void assertReport(ApprovalFailureReporter reporter, Class<?> expected)
   {
     FirstWorkingReporter first = (FirstWorkingReporter) reporter;
     AlwaysWorkingReporter actual = (AlwaysWorkingReporter) first.getReporters()[1];
-    Assert.assertEquals("Please Fill In the Blank ____", expected.getName(),
+    assertEquals("Please Fill In the Blank ____", expected.getName(),
         actual.getWrapped().getClass().getName());
   }
 }

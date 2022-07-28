@@ -1,7 +1,5 @@
 package org.approvaltests.koans.lesson01;
 
-import static org.junit.Assert.assertEquals;
-
 import java.awt.Rectangle;
 
 import org.approvaltests.Approvals;
@@ -12,8 +10,9 @@ import org.approvaltests.namer.ApprovalNamer;
 import org.approvaltests.reporters.DiffReporter;
 import org.approvaltests.reporters.JunitReporter;
 import org.approvaltests.reporters.UseReporter;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * How to do Koans:
@@ -68,7 +67,7 @@ public class GettingStarted extends Koans
     String className = ___;
     String methodName = "fileNames";
     String approvalName = className + "." + methodName;
-    Assert.assertEquals(namer.getApprovalName(), approvalName);
+    assertEquals(namer.getApprovalName(), approvalName);
   }
 
   @Test

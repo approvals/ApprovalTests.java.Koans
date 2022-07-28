@@ -9,7 +9,7 @@ import org.approvaltests.koans.helpers.Koans;
 import org.approvaltests.koans.helpers.Sequence;
 import org.approvaltests.reporters.JunitReporter;
 import org.approvaltests.reporters.UseReporter;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.lambda.functions.Function1;
 
 /**

@@ -1,9 +1,9 @@
 package org.approvaltests.koans.helpers;
 
-import org.junit.Assert;
-
 import com.spun.util.ObjectUtils;
 import com.spun.util.io.FileUtils;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FileAssert
 {
@@ -14,7 +14,7 @@ public class FileAssert
       StackTraceElement caller = Thread.currentThread().getStackTrace()[2];
       Class<?> clazz = Class.forName(caller.getClassName());
       String expected = FileUtils.readFromClassPath(clazz, fileContainingExpected).trim();
-      Assert.assertEquals(expected, actual);
+      assertEquals(expected, actual);
     }
     catch (Exception e)
     {

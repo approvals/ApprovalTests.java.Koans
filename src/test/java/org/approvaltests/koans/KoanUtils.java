@@ -1,7 +1,7 @@
-package org.approvaltests.koans.tests;
+package org.approvaltests.koans;
 
-import static org.junit.Assert.assertTrue;
-import org.junit.Assert;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.approvaltests.koans.helpers.Koans;
 
@@ -43,11 +43,11 @@ public class KoanUtils
     }
     if (passDesired)
     {
-      Assert.assertFalse(String.format("The Method '%s' will not solve", method), failed);
+      assertFalse(failed, String.format("The Method '%s' will not solve", method));
     }
     else
     {
-      assertTrue(String.format("The Method '%s' is alread passing", method), failed);
+      assertTrue(failed, String.format("The Method '%s' is alread passing", method));
     }
   }
 }

@@ -1,14 +1,14 @@
 package org.approvaltests.koans.helpers;
 
-import org.junit.Assert;
-
 import org.approvaltests.core.ApprovalFailureReporter;
+
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class _____ implements ApprovalFailureReporter
 {
   @Override
-  public void report(String received, String approved) throws Exception
+  public void report(String received, String approved) 
   {
-    Assert.fail("You need to fill in the blank");
+    fail("You need to fill in the blank");
   }
 }

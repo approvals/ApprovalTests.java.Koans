@@ -2,14 +2,11 @@ package org.approvaltests.koans.lesson05;
 
 import org.approvaltests.combinations.CombinationApprovals;
 import org.approvaltests.koans.helpers.Koans;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.Month;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 /**
  * How to do Koans:
@@ -25,13 +22,13 @@ import java.util.Date;
 public class DataDrivenCombinations extends Koans {
 
     @Test
-    public void oneDimensionalInputIsTheSameAsArray() throws Exception {
+    public void oneDimensionalInputIsTheSameAsArray() {
         String[] beatles = {"John", ___, "Paul", "George", "Ringo"};
         CombinationApprovals.verifyAllCombinations(a -> a, beatles);
     }
 
     @Test
-    public void twoDimensionalInputGoesByTheSquare() throws Exception {
+    public void twoDimensionalInputGoesByTheSquare() {
         Integer[] small = {1, 2, 3};
         Integer[] big = {11, ____, 55};
 
@@ -39,7 +36,7 @@ public class DataDrivenCombinations extends Koans {
     }
 
     @Test
-    public void exceptionsAreOk() throws Exception {
+    public void exceptionsAreOk() {
         Integer[] numerator = {60, 126, 42};
         Integer[] denominator1 = {3, 2};
         Integer[] denominator2 = {-1, ____, 1};
@@ -48,7 +45,7 @@ public class DataDrivenCombinations extends Koans {
     }
 
     @Test
-    public void workingWithALambda() throws Exception {
+    public void workingWithALambda() {
         LocalDateTime newMillennium = LocalDateTime.of(2000, Month.JANUARY, 1, 0, 0, 0);
         String[] years = {"yy", "yyyy"};
         String[] months = {"M", ___, "MMMM"};
