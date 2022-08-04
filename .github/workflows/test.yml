@@ -16,8 +16,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        java: ['11','17']
-        os: [ubuntu,windows]
+        java: ['17']
+#        os: [ubuntu,windows]
+        os: [macos,windows]
 
     steps:
     - uses: actions/checkout@v3
