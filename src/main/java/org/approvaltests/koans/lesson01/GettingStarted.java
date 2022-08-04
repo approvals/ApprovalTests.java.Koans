@@ -54,14 +54,14 @@ public class GettingStarted extends Koans
   }
 
   @Test
-  public void ___() throws Exception
+  public void ___()
   {
     ApprovalNamer namer = Approvals.createApprovalNamer();
     assertEquals("GettingStarted.usesMethodName", namer.getApprovalName());
   }
 
   @Test
-  public void fileNames() throws Exception
+  public void fileNames()
   {
     ApprovalNamer namer = Approvals.createApprovalNamer();
     String className = ___;
@@ -71,7 +71,7 @@ public class GettingStarted extends Koans
   }
 
   @Test
-  public void verifyBiggerText() throws Exception
+  public void verifyBiggerText()
   {
     Rectangle r = new Rectangle();
     r.width = 40;
@@ -83,29 +83,29 @@ public class GettingStarted extends Koans
   }
 
   @Test
-  public void approvalsUsesThisFileNameConvention() throws Exception
+  public void approvalsUsesThisFileNameConvention()
   {
     Approvals.verify(___);
-    // Hint: If you double click the 1st line of the Failure Trace a diff tool will open
+    // Hint: If you double-click the 1st line of the Failure Trace a diff tool will open
   }
 
   @Test
   @UseReporter(DiffReporter.class)
-  public void seeingFilesSideBySide() throws Exception
+  public void seeingFilesSideBySide()
   {
     ApprovalNamer namer = Approvals.createApprovalNamer();
     Approvals.verify(___ + "\r\n" + namer.getApprovalName());
   }
 
   @Test
-  public void changingTheGoldenMaster() throws Exception
+  public void changingTheGoldenMaster()
   {
     Approvals.verify("This is the golden master");
     //Hint: What is the name of the file where the blank is?
   }
 
   @Test
-  public void verifyObjects() throws Exception
+  public void verifyObjects()
   {
     Rectangle r = new Rectangle();
     r.width = 40;
@@ -116,7 +116,7 @@ public class GettingStarted extends Koans
   }
 
   @Test
-  public void sometimeYouNeedABetterToString() throws Exception
+  public void sometimeYouNeedABetterToString()
   {
     Person p = new Person("jayne", "cobb", true, 38);
     String format = "Person\n  FirstName:%s\n  LastName:%s\n  Sex:%s\n  Age:%s\n";
