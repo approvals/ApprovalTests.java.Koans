@@ -4,13 +4,11 @@ import org.approvaltests.koans.lesson01.GettingStarted;
 import org.approvaltests.koans.lesson02.Collections;
 import org.approvaltests.koans.lesson04.UsingReporters;
 import org.approvaltests.koans.lesson05.DataDrivenCombinations;
-import org.approvaltests.reporters.*;
 import org.junit.jupiter.api.Test;
 
 public class KoansTests
 {
   @Test
-  @UseReporter(QuietReporter.class)
   public void testLesson1()
   {
     assertLesson1("normalJunitAsserts", "Small String");
@@ -31,7 +29,6 @@ public class KoansTests
     KoanUtils.assertKoan(new GettingStarted(), name, answer);
   }
   @Test
-  @UseReporter(QuietReporter.class)
   public void testLesson2()
   {
     assertLesson2("simpleArrays", "Java");
@@ -50,20 +47,17 @@ public class KoansTests
     KoanUtils.assertKoan(new Collections(), name, answer);
   }
   @Test
-  @UseReporter(QuietReporter.class)
   public void testLesson3()
   {
     // unsure how to test this yet
   }
   @Test
-  @UseReporter(QuietReporter.class)
   public void testLesson4()
   {
     KoanUtils.assertKoanReady(new UsingReporters(), "ConfiguringTheFileLauncherReporter");
     // unsure how to test this yet
   }
   @Test
-  @UseReporter(QuietReporter.class)
   public void testLesson5()
   {
     assertLesson5("oneDimensionalInputIsTheSameAsArray", "Yoko");
