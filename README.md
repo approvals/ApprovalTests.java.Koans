@@ -1,4 +1,7 @@
 # Welcome to the ApprovalTests Java Koans #
+
+[![build](../../workflows/test.yml/badge.svg)](../../actions/workflows/test.yml)
+
 _"Learn by Doing"_  
 27 progressive examples to help you learn Approval Tests  
 By: Llewellyn Falco 
