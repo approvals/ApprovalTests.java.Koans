@@ -3,7 +3,7 @@
 .preferences
 .classpath
 .project
-target
+/target
 .idea
 *.iml
 

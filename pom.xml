@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>starterproject</groupId>
-    <artifactId>approvaltests_playground</artifactId>
+    <groupId>approvaltests</groupId>
+    <artifactId>approvaltests_koans</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -12,8 +12,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>17</source>
-                    <target>17</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
             <plugin>
