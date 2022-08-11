@@ -1,33 +1,35 @@
 # Welcome to the ApprovalTests Java Koans #
 
-[![build](../../workflows/test.yml/badge.svg)](../../actions/workflows/test.yml)
+[![build](https://github.com/approvals/ApprovalTests.java.Koans/actions/workflows/test.yml/badge.svg)](https://github.com/approvals/ApprovalTests.java.Koans/actions/workflows/test.yml)
 
-_"Learn by Doing"_  
-27 progressive examples to help you learn Approval Tests  
+toc
+
+# Learn by Doing
+> 27 progressive examples to help you learn Approval Tests  
 By: Llewellyn Falco 
 
-**Definition of ‘Koan’**  
+## Definition of ‘Koan’
 Kōans is a zen word meaning the enlightenment or awakening of a person, usually through a puzzle or riddle. The most common one is "What is the sound of one hand clapping?"
 
-**What is this all about?**  
+## What is this all about?
 ApprovalTests is a verification library to help with unit testing. 
 These Koans are an interactive and fun way to be introduced to and learn how to test with ApprovalTests.
 
-**Group Learning**  
+## Group Learning
 If you are learning with a group checkout the printouts to help facilitate that at [Group Learning Facilitation](https://github.com/approvals/GroupLearningFacilitation)
 
-**Current Lessons**
+## Current Lessons
  
 - GettingStarted
 - Collections
 - ApprovingTheResult
 - UsingReporters
  
-**Getting Started**  
+## Getting Started  
 Download the zip, expand it and import it into Eclipse. 
 Run the unit test, see it fail, then fill in the blank ("____"). Run it again to see it pass.
 
-**Tips & Tricks**  
+## Tips & Tricks
   
 - *Play*: Experimentation is a powerful learning tool. Don't be afraid to try stuff out, and run it to see what happens.
 - *Run the Test*: It is valuable to see what the results are. All Koans are designed to produce something even before they are filled in.
