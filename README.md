@@ -2,7 +2,15 @@
 
 [![build](https://github.com/approvals/ApprovalTests.java.Koans/actions/workflows/test.yml/badge.svg)](https://github.com/approvals/ApprovalTests.java.Koans/actions/workflows/test.yml)
 
-toc
+<!-- toc -->
+## Contents
+
+  * [Definition of ‘Koan’](#definition-of-koan)
+  * [What is this all about?](#what-is-this-all-about)
+  * [Group Learning](#group-learning)
+  * [Current Lessons](#current-lessons)
+  * [Getting Started](#getting-started)
+  * [Tips & Tricks](#tips--tricks)<!-- endToc -->
 
 # Learn by Doing
 > 27 progressive examples to help you learn Approval Tests  
