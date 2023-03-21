@@ -52,7 +52,7 @@ public class UsingReporters extends Koans
   @UseReporter(FileLauncherReporter.class)
   public void UsingTextReportersForInsight() throws Exception
   {
-    if (!decode("=fikpKnf").equals(____))
+    if (!decode("=fikpKnf").equals(___))
     {
       ApprovalFailureReporter reporter = ReporterFactory.get();
       reporter.report(getPath("Insight.txt"), "");
@@ -72,17 +72,5 @@ public class UsingReporters extends Koans
     }
   }
 
-  private ApprovalFailureReporter getReporter() {
-    FirstWorkingReporter first = (FirstWorkingReporter) ReporterFactory.get();
-    ApprovalFailureReporter reporter = first.getReporters()[1];
-    if (reporter instanceof AlwaysWorkingReporter){
-      reporter = ((AlwaysWorkingReporter) reporter).getWrapped();
-    }
-    return reporter;
 
-  }
-  private void assertReporter(ApprovalFailureReporter actual, Class<?> expected)
-  {
-     assertEquals(expected.getName(), actual.getClass().getName());
-  }
 }

@@ -18,10 +18,14 @@ public class KoanUtils
   public static void assertKoan(Koans koan, String method, Object answer)
   {
     assertState(koan, method, false);
+    assertKoanPassing(koan, method, answer);
+  }
+
+  public static void assertKoanPassing(Koans koan, String method, Object answer) {
     setAnswers(koan, answer);
     assertState(koan, method, true);
   }
-  
+
   private static void setAnswers(Koans koan, Object answer)
   {
     if (answer instanceof String)

@@ -46,6 +46,7 @@ public class KoansTests
   {
     KoanUtils.assertKoan(new Collections(), name, answer);
   }
+
   @Test
   public void testLesson3()
   {
@@ -56,6 +57,13 @@ public class KoansTests
   {
     KoanUtils.assertKoanReady(new UsingReporters(), "ConfiguringTheFileLauncherReporter");
     // unsure how to test this yet
+    assertLesson4("UsingTextReportersForInsight", "Forty Two");
+    assertLesson4("UsingImageForInsight", "Blue");
+
+  }
+  private void assertLesson4(String name, Object answer)
+  {
+    KoanUtils.assertKoanPassing(new UsingReporters(), name, answer);
   }
   @Test
   public void testLesson5()
