@@ -4,18 +4,10 @@ import org.approvaltests.ReporterFactory;
 import org.approvaltests.core.ApprovalFailureReporter;
 import org.approvaltests.koans.helpers.Koans;
 import org.approvaltests.koans.helpers._____;
-import org.approvaltests.reporters.AlwaysWorkingReporter;
-import org.approvaltests.reporters.ClipboardReporter;
-import org.approvaltests.reporters.FileLauncherReporter;
-import org.approvaltests.reporters.FirstWorkingReporter;
-import org.approvaltests.reporters.ImageWebReporter;
-import org.approvaltests.reporters.MultiReporter;
-import org.approvaltests.reporters.QuietReporter;
-import org.approvaltests.reporters.UseReporter;
+import org.approvaltests.reporters.*;
 import org.approvaltests.reporters.windows.TortoiseImageDiffReporter;
 import org.junit.jupiter.api.Test;
 
-import static com.spun.util.Asserts.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
@@ -36,23 +28,25 @@ public class UsingReporters extends Koans
   @UseReporter(_____.class)
   public void ConfiguringTheFileLauncherReporter() throws Exception
   {
-    ApprovalFailureReporter reporter = ReporterFactory.get();
-    assertReport(reporter, FileLauncherReporter.class);
+    ApprovalFailureReporter reporter = getReporter();
+    assertReporter(reporter, FileLauncherReporter.class);
   }
+
+
+
   @Test
   public void ConfiguringAClassLevelDefault() throws Exception
   {
-    ApprovalFailureReporter reporter = ReporterFactory.get();
-    assertReport(reporter, _____.class);
+    ApprovalFailureReporter reporter = getReporter();
+    assertReporter(reporter, _____.class);
   }
   @Test
   @UseReporter({ClipboardReporter.class, ImageWebReporter.class, TortoiseImageDiffReporter.class})
   public void ConfiguringMultipleReporters() throws Exception
   {
-    ApprovalFailureReporter reporter = ReporterFactory.get();
-    MultiReporter multi = (MultiReporter) reporter;
+    MultiReporter multi = (MultiReporter) getReporter();
     ApprovalFailureReporter second = multi.getReporters()[1];
-    assertTrue(second.getClass().getName(), second instanceof _____);
+    assertReporter(second, _____.class);
   }
   @Test
   @UseReporter(FileLauncherReporter.class)
@@ -77,11 +71,18 @@ public class UsingReporters extends Koans
       fail("Please fill in the blank");
     }
   }
-  private void assertReport(ApprovalFailureReporter reporter, Class<?> expected)
+
+  private ApprovalFailureReporter getReporter() {
+    FirstWorkingReporter first = (FirstWorkingReporter) ReporterFactory.get();
+    ApprovalFailureReporter reporter = first.getReporters()[1];
+    if (reporter instanceof AlwaysWorkingReporter){
+      reporter = ((AlwaysWorkingReporter) reporter).getWrapped();
+    }
+    return reporter;
+
+  }
+  private void assertReporter(ApprovalFailureReporter actual, Class<?> expected)
   {
-    FirstWorkingReporter first = (FirstWorkingReporter) reporter;
-    AlwaysWorkingReporter actual = (AlwaysWorkingReporter) first.getReporters()[1];
-    assertEquals("Please Fill In the Blank ____", expected.getName(),
-        actual.getWrapped().getClass().getName());
+     assertEquals(expected.getName(), actual.getClass().getName());
   }
 }
