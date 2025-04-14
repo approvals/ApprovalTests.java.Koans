@@ -57,8 +57,8 @@ public class KoansTests
   {
     KoanUtils.assertKoanReady(new UsingReporters(), "ConfiguringTheFileLauncherReporter");
     // unsure how to test this yet
-    assertLesson4("UsingTextReportersForInsight", "Forty Two");
-    assertLesson4("UsingImageForInsight", "Blue");
+    assertLesson4("usingTextReportersForInsight", "Forty Two");
+    assertLesson4("usingImageForInsight", "Blue");
 
   }
   private void assertLesson4(String name, Object answer)

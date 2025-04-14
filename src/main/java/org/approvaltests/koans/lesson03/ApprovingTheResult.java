@@ -15,7 +15,7 @@ public class ApprovingTheResult
 {
   @Test
   @UseReporter(QuietReporter.class)
-  public void RenameTheApproved() throws Exception
+  public void renameTheApproved() throws Exception
   {
     // Directions: 
     // 1)Run the test
@@ -26,7 +26,7 @@ public class ApprovingTheResult
 
   @Test
   @UseReporter(FileLauncherReporter.class)
-  public void SaveAsApproved() throws Exception
+  public void saveAsApproved() throws Exception
   {
     // Directions: 
     // 1)Run the test
@@ -36,7 +36,7 @@ public class ApprovingTheResult
 
   @Test
   @UseReporter(ClipboardReporter.class)
-  public void MoveTheFileViaCommandLine() throws Exception
+  public void moveTheFileViaCommandLine() throws Exception
   {
     // Directions: 
     // 1)Run the test
@@ -46,7 +46,7 @@ public class ApprovingTheResult
 
   @Test
   @UseReporter(DiffReporter.class)
-  public void UseWholeFileInADiffReporter() throws Exception
+  public void useWholeFileInADiffReporter() throws Exception
   {
     // Directions: 
     // You will need to have a diff reporter installed on you system to do this.

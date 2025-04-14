@@ -26,7 +26,7 @@ public class UsingReporters extends Koans
 {
   @Test
   @UseReporter(_____.class)
-  public void ConfiguringTheFileLauncherReporter() throws Exception
+  public void configuringTheFileLauncherReporter() throws Exception
   {
     ApprovalFailureReporter reporter = getReporter();
     assertReporter(reporter, FileLauncherReporter.class);
@@ -35,14 +35,14 @@ public class UsingReporters extends Koans
 
 
   @Test
-  public void ConfiguringAClassLevelDefault() throws Exception
+  public void configuringAClassLevelDefault() throws Exception
   {
     ApprovalFailureReporter reporter = getReporter();
     assertReporter(reporter, _____.class);
   }
   @Test
   @UseReporter({ClipboardReporter.class, ImageWebReporter.class, TortoiseImageDiffReporter.class})
-  public void ConfiguringMultipleReporters() throws Exception
+  public void configuringMultipleReporters() throws Exception
   {
     MultiReporter multi = (MultiReporter) getReporter();
     ApprovalFailureReporter second = multi.getReporters()[1];
@@ -50,7 +50,7 @@ public class UsingReporters extends Koans
   }
   @Test
   @UseReporter(FileLauncherReporter.class)
-  public void UsingTextReportersForInsight() throws Exception
+  public void usingTextReportersForInsight() throws Exception
   {
     if (!decode("=fikpKnf").equals(___))
     {
@@ -61,7 +61,7 @@ public class UsingReporters extends Koans
   }
   @Test
   @UseReporter(ImageWebReporter.class)
-  public void UsingImageForInsight() throws Exception
+  public void usingImageForInsight() throws Exception
   {
     String whatWasTheOldColor = ___;
     if (!decode("Ycl\\").equals(whatWasTheOldColor.toLowerCase()))
